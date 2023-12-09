@@ -12,7 +12,7 @@ const RelatedVideos = () => {
 
   const fetchRelatedVideos = async () => {
     const data = await fetch(
-      "https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=15&regionCode=IN&key=AIzaSyAC_SL8B3RyKPJx2B0eR2zsrAtXZkzFLZo"
+      "https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=15&regionCode=IN&key="
     );
     const json = await data.json();
     setRelatedVideos(json.items);
